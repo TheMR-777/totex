@@ -2,15 +2,16 @@
 
 The Main Screen
 
-## Getting Started
+## Introduction
 
-This project is a starting point for a Flutter application.
+This project contains the main screen elements of TOTEX Mobile App.
 
-A few resources to get you started if this is your first Flutter project:
+## Project Tour
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Since, it's only the Main Screen, the pages are divided in virtual screens, each one with its own file
+- 01_luxury_fashion.dart: The Front Screen
+- 02_the_new_arrival.dart: The Product Showcase Screen
+- 03_collections.dart: The Trending Products Screen
+- 04_the_ending.dart: The Ending Screen
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Moreover, all the constants and reusable widgets are located inside sources.dart
