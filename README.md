@@ -1,10 +1,6 @@
-# wp_01_main_screen
+# TOTEX Mobile Application: Main Screen
 
-The Main Screen
-
-## Introduction
-
-This project contains the main screen elements of TOTEX Mobile App.
+Only contains the main screen elements of TOTEX Mobile.
 
 ## Project Tour
 
