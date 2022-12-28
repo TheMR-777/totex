@@ -16,9 +16,7 @@ class _TheEndingState extends State<TheEnding> {
   @override
   void initState() {
     super.initState();
-    _controller = VideoPlayerController.network(
-      'https://vod-progressive.akamaized.net/exp=1672171044~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F4827%2F15%2F399139457%2F1701868879.mp4~hmac=2264f31ff1ecec01f4a15d70d570df1679759b93d6f22372610a1e29206166d1/vimeo-prod-skyfire-std-us/01/4827/15/399139457/1701868879.mp4',
-    )..initialize().then((_) {
+    _controller = VideoPlayerController.asset("assets/vid.mp4")..initialize().then((_) {
       // Ensure the first frame is shown after the video is initialized
       setState(() {});
     });
