@@ -13,12 +13,12 @@ void main() => runApp(MaterialApp(
     appBarTheme: const AppBarTheme(
       backgroundColor: Color(0xFFe7eaef),
       centerTitle: true,
-      toolbarHeight: 80,
+      toolbarHeight: 70,
       elevation: 0,
     ),
     iconTheme: const IconThemeData(
       color: Colors.black45,
-      size: 30,
+      size: 27,
     )
   ),
   home: const MyScaffoldWithAppBar(),

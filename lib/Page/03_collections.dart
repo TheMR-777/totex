@@ -10,6 +10,10 @@ class Collections extends StatelessWidget {
   static final my_brands = [
     totex_img, totex_img,
   ];
+  static const trendings = [
+    October(), Autumn(),
+  ];
+  static var trending_one = math.Random().nextBool();
 
   @override
   Widget build(BuildContext context) => TheScreen(
@@ -21,9 +25,10 @@ class Collections extends StatelessWidget {
           ),    // Luxury Divider
           Flexible(
             child: GridView.count(
+              shrinkWrap: true,
               crossAxisCount: 2,
               childAspectRatio: 5 / 1,
-              padding: const EdgeInsets.all(25),
+              //padding: const EdgeInsets.all(25),
               crossAxisSpacing: 10,
               children: my_brands,
             ),
@@ -44,6 +49,7 @@ class Collections extends StatelessWidget {
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                   colors: [
+                    Colors.transparent,
                     Colors.grey.shade100,
                     Colors.transparent,
                   ],
@@ -57,10 +63,8 @@ class Collections extends StatelessWidget {
                   ),          // COLLECTIONS
                   Flexible(
                     flex: 2,
-                    child: math.Random().nextBool()
-                        ? const October()
-                        : const Autumn(),
-                  ),    // Ad. Looking
+                    child: trendings[trending_one ? 0 : 1],
+                  ),          // Ad. Looking
                 ],
               ),
             ),
@@ -84,43 +88,41 @@ class October extends StatelessWidget {
       Flexible(
           child: Image.asset("assets/Totex_Modified/png (4).png", height: 300)
       ),    // The Image
-      Flexible(
-        child: Stack(
-          alignment: Alignment.center,
-          children: [
-            Text(
-              "10",
-              style: GoogleFonts.dmSerifDisplay(
-                fontSize: 250,
-                fontStyle: FontStyle.italic,
-                color: Colors.grey.shade600,
-              ),
-            ),    // The 10
-            Column(
-              children: [
-                Text(
-                  "October",
-                  style: GoogleFonts.dmSerifDisplay(
-                    height: 5,
-                    fontSize: 50,
-                    fontStyle: FontStyle.italic,
-                    color: Colors.grey.shade100,
-                  ),
-                ),  // October
-                Text(
-                  "COLLECTION",
-                  style: GoogleFonts.montserrat(
-                    fontSize: 11,
-                    height: -5,
-                    letterSpacing: 10,
-                    color: Colors.grey.shade100,
-                  ),
-                ),  // COLLECTION
-              ],
-            ),  // The October
-          ],
-        ),
-      ),    // The 10 and October
+      Stack(
+        alignment: Alignment.center,
+        children: [
+          Text(
+            "10",
+            style: GoogleFonts.dmSerifDisplay(
+              fontSize: 250,
+              fontStyle: FontStyle.italic,
+              color: Colors.grey.shade600,
+            ),
+          ),    // The 10
+          Column(
+            children: [
+              Text(
+                "October",
+                style: GoogleFonts.dmSerifDisplay(
+                  height: 5,
+                  fontSize: 50,
+                  fontStyle: FontStyle.italic,
+                  color: Colors.grey.shade100,
+                ),
+              ),  // October
+              Text(
+                "COLLECTION",
+                style: GoogleFonts.montserrat(
+                  fontSize: 11,
+                  height: -5,
+                  letterSpacing: 10,
+                  color: Colors.grey.shade100,
+                ),
+              ),  // COLLECTION
+            ],
+          ),  // The October
+        ],
+      ),       // The 10 and October
     ],
   );
 }

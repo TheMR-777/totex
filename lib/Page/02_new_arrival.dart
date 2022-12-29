@@ -67,6 +67,7 @@ class _NewArrivalState extends State<NewArrival> {
           child: CarouselSlider(
             carouselController: my_controller,
             options: CarouselOptions(
+              enableInfiniteScroll: false,
               height: my_constant.getScreenSize(context).height * 0.55,
               onPageChanged: (index, reason) => setState(() => NewArrival.selected_one = index),
             ),

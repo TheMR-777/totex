@@ -36,14 +36,17 @@ class _TheEndingState extends State<TheEnding> {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Flexible(
-            flex: 3,
-            child: VideoPlayer(_controller)
+            flex: 15,
+            child: _controller.value.isInitialized
+                ? VideoPlayer(_controller)
+                : Image.asset("assets/vid_alt.png"),
         ),    // Video
         Flexible(
-          flex: 2,
+          flex: 10,
           child: Padding(
-            padding: const EdgeInsets.all(17.0),
+            padding: const EdgeInsets.symmetric(horizontal: 17.0),
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Text(
@@ -66,14 +69,14 @@ class _TheEndingState extends State<TheEnding> {
           ),
         ),    // Quote
         Flexible(
-          flex: 2,
+          flex: 1,
           child: Image.asset(
             "assets/the_divider.png",
-            width: 250,
             color: Colors.grey.shade600,
           ),
         ),    // Divider
         Flexible(
+          flex: 5,
           child: Text(
             "Thank You!",
             style: GoogleFonts.greatVibes(
@@ -82,6 +85,7 @@ class _TheEndingState extends State<TheEnding> {
           )
         ),    // Thank You
         Flexible(
+          flex: 3,
           child: Container(
             color: Colors.black,
             child: Center(
