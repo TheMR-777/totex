@@ -1,10 +1,11 @@
 // ignore_for_file: camel_case_types
 
 import 'package:flutter/material.dart';
-import 'Page/01_luxury_fashion.dart';
-import 'Page/02_new_arrival.dart';
-import 'Page/03_collections.dart';
-import 'Page/04_the_ending.dart';
+import 'TheMR/Page/01_luxury_fashion.dart';
+import 'TheMR/Page/02_new_arrival.dart';
+import 'TheMR/Page/03_collections.dart';
+import 'TheMR/Page/04_the_ending.dart';
+import 'Other/CartScreen.dart';
 
 void main() => runApp(MaterialApp(
   debugShowCheckedModeBanner: false,
@@ -39,10 +40,6 @@ class MyScaffoldWithAppBar extends StatelessWidget {
     ),
     IconButton(
       onPressed: () {},
-      icon: const Icon(Icons.shopping_bag_outlined, color: Colors.black45),
-    ),
-    IconButton(
-      onPressed: () {},
       style: IconButton.styleFrom(
         foregroundColor: Colors.red
       ),
@@ -50,17 +47,28 @@ class MyScaffoldWithAppBar extends StatelessWidget {
     )
   ];
 
+  static AppBar my_app_bar(BuildContext context) => AppBar(
+    title: Image.asset("assets/Logo/Asset_22x.png", height: 47),
+    leading: header_buttons[0],
+    actions: [
+      header_buttons[1], header_spacing,
+      IconButton(
+        onPressed: () => Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const CartScreen(),
+          )
+        ),
+        icon: const Icon(Icons.shopping_bag_outlined, color: Colors.black45),
+      ),
+      header_spacing,
+      header_buttons[2], header_spacing,
+    ],
+  );
+
   @override
   Widget build(BuildContext context) => Scaffold(
-    appBar: AppBar(
-      title: Image.asset("assets/Logo/Asset_22x.png", height: 47),
-      leading: header_buttons[0],
-      actions: [
-        header_buttons[1], header_spacing,
-        header_buttons[2], header_spacing,
-        header_buttons[3], header_spacing,
-      ],
-    ),
+    appBar: my_app_bar(context),
     body: const MyScrollableView(),
   );
 }

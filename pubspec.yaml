@@ -12,6 +12,7 @@ dependencies:
   carousel_slider: ^4.2.1
   flutter_svg: ^1.1.6
   video_player: ^2.4.10
+  smooth_page_indicator: ^1.0.0+2
 
 dev_dependencies:
   flutter_test:
@@ -22,5 +23,6 @@ flutter:
   assets:
     - assets/
     - assets/Logo/
+    - assets/Icons/
     - assets/Totex/
     - assets/Totex_Modified/
