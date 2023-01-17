@@ -5,7 +5,8 @@ import 'TheMR/Page/01_luxury_fashion.dart';
 import 'TheMR/Page/02_new_arrival.dart';
 import 'TheMR/Page/03_collections.dart';
 import 'TheMR/Page/04_the_ending.dart';
-import 'Other/CartScreen.dart';
+import 'Other/EmptyCart.dart';
+import 'CartScreen.dart';
 
 void main() => runApp(MaterialApp(
   debugShowCheckedModeBanner: false,
