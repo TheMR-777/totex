@@ -78,14 +78,12 @@ class MyScrollableView extends StatelessWidget {
   const MyScrollableView({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) => SingleChildScrollView(
-    child: Column(
-      children: const [
-        Luxury(),          // The Front and Button
-        NewArrival(),      // The New Arrival Col.
-        Collections(),     // As the name implies
-        TheEnding(),       // The Ending
-      ],
-    ),
+  Widget build(BuildContext context) => ListView(
+    children: const [
+      Luxury(),          // The Front and Button
+      NewArrival(),      // The New Arrival Col.
+      Collections(),     // As the name implies
+      TheEnding(),       // The Ending
+    ],
   );
 }
