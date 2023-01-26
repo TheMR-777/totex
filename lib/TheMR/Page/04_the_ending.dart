@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:video_player/video_player.dart';
-import 'package:wp_01_main_screen/TheMR/sources.dart';
+import '../sources.dart';
 
 class TheEnding extends StatefulWidget {
   const TheEnding({Key? key}) : super(key: key);
