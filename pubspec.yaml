@@ -1,6 +1,6 @@
 name: Totex Frontend
 description: The Main Screen
-version: 1.0.0+1
+version: 1.0.0
 
 environment:
   sdk: '>=2.18.6 <3.0.0'
